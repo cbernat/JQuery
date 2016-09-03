@@ -1,3 +1,14 @@
 .dropdown{
 	display:inline-block;
 }
+.field-name{
+	width:calc(100% - 450px);
+	display:inline-block;
+}
+.element-row{
+	hegith:40px;
+}
+input.error, input.error:focus, button.error{
+	border: 1px solid red;
+	
+}

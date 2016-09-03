@@ -21,30 +21,40 @@
 			  <p>Please select a name for the field and choose the type of field. You'll see a preview bellow.</p>
 			</div>
 			<section class="new-row--main">
-				<label>Field Name:</label>
-				<input type="text" class="form-control" placeholder="Enter your field name here..."/>
-				<label>Field Value:</label>
-				<div class="dropdown">
-					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    Field Value
-					    <span class="caret"></span>
-					  </button>
-					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					    <li><a href="#">Text</a></li>
-					    <li><a href="#">Boolean</a></li>
-					    <li><a href="#">Number</a></li>
-					    <li><a href="#">Email</a></li>
-					  </ul>
+				<form id="addElementForm">
+				<div class="element-row">	
+					<label>Field Name:</label>
+					<input type="text" class="form-control field-name" id="fieldNameInput" required placeholder="Enter your field name here..."/>
 				</div>
-				<button class="btn btn-primary btn-lg">Add To Form</button>
+				<br/>
+				<div class="element-row">
+					<label>Field Value:</label>
+					<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="fieldTypedd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <label>Field Value</label>
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="fieldTypedd">
+						    <li><a href="#">Text</a></li>
+						    <li><a href="#">Boolean</a></li>
+						    <li><a href="#">Number</a></li>
+						    <li><a href="#">Email</a></li>
+						  </ul>
+					</div>
+				</div>
+				<br/>
+				<div class="element-row">
+				<button class="btn btn-primary btn-md add-form-btn" id="addNewBtn">Add To Form</button>
+				</div>
+			</form>
 			</section>
-	
+			<div id="formPreview"></div>
 		</div>
 	</div>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    
 </body>
 </html>
