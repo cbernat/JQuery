@@ -12,3 +12,12 @@ input.error, input.error:focus, button.error{
 	border: 1px solid red;
 	
 }
+.form-preview{
+	background-color: #ccc;
+	border: 1px solid #eee;
+	min-height: 200px;
+	padding:10px;
+}
+.form-preview label, .form-preview input{
+	margin:10px 0;
+}

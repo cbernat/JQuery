@@ -1,5 +1,6 @@
+var validator;
 $(document).ready(function(){
-	$("#addElementForm").validate();
+	validator = $("#addElementForm").validate();
 });
 
 $(".dropdown-menu li a").click(function(){
@@ -9,7 +10,8 @@ $(".dropdown-menu li a").click(function(){
 });
 
 function resetForm(){
-	
+	$("#fieldNameInput").val("");
+	$("#fieldTypedd label").text("Field Value");
 }
 
 function addNewElement(fieldName, fieldType){
@@ -21,13 +23,17 @@ function addNewElement(fieldName, fieldType){
 		  newElement = $("<input></input>", { id:fieldName, type:'text'});
 		break;
 		case "Boolean":
+			var div = $("<div></div>");
+			newElement = div.append($("<label>Yes</label>")).append($("<input></input>", { type:'radio', value:'Yes', name:fieldName})).append($("<label>No</label>")).append($("<input></input>", { type:'radio', value:'No', name:fieldName}));
 		break;
 		case "Number":
+			newElement = $("<input></input>", {id:fieldName, type:"number"});
 		break;
 		case "Email":
+		 newElement = $("<input></input>", {id:fieldName, type:'email'});
 		break;
 	}
-	$("#formPreview").append(label).append(newElement);
+	$("#formPreview").append(label).append(newElement).append($("<br/>"));
 	resetForm();
 }
 
