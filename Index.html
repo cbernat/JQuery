@@ -14,20 +14,20 @@
 
 </head>
 <body>
-	<div class="container bs-docs-container">
-		<div class="row">
 			<div class="jumbotron">
-			  <h1>JQuery form generator</h1>
-			  <p>Please select a name for the field and choose the type of field. You'll see a preview bellow.</p>
+				<div class="container">
+			  		<h1>JQuery form generator</h1>
+			  		<p>Please select a name for the field and choose the type of field. You'll see a preview bellow.</p>
+				</div>
 			</div>
-			<section class="new-row--main">
+			<section class="new-row--main container">
 				<form id="addElementForm">
-				<div class="element-row">	
+				<div class="element-row ">	
 					<label>Field Name:</label>
-					<input type="text" class="form-control field-name" id="fieldNameInput" required placeholder="Enter your field name here..."/>
+					<input type="text" class="form-control field-name" id="fieldNameInput" placeholder="Enter your field name here..."/>
 				</div>
 				<br/>
-				<div class="element-row">
+				<div class="element-row" >
 					<label>Field Value:</label>
 					<div class="dropdown">
 						  <button class="btn btn-default dropdown-toggle" type="button" id="fieldTypedd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,17 +44,26 @@
 				</div>
 				<br/>
 				<div class="element-row">
-				<button class="btn btn-primary btn-md add-form-btn" id="addNewBtn">Add To Form</button>
+				<button class="btn btn-primary btn-md add-form-btn" id="addNewBtn">Add To Form</button> 
+				<button class="btn btn-primary btn-md add-form-btn" id="showPreview">Show Form live Preview .. </button>
+				
 				</div>
 			</form>
-			</section>
 			<br/>
-			<div id="formPreview" class="form-preview">
-				<h1>My New Form Preview</h1>
-
+			<div id="formPreview" class="form-preview disabled">
+				<div class="overlayer"></div>
+				<h3>My New Form Preview</h3>
+				<div id="elementsContainer">
+				</div>
 			</div>
-		</div>
-	</div>
+
+			</section>
+			<footer class="footer">
+      <div class="container">
+        <p class="text-muted">JQuery form generator demo 2016</p>
+      </div>
+    </footer>
+			
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
